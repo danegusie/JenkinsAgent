@@ -1,13 +1,13 @@
 
 pipeline{
     agent{
-        docker { image 'alpine:latest'}
+        docker { image 'node:16-alpine'}
     }
     stages{
         stage('Test'){
             steps{
                 sh 'whoami'
-                sh 'docker version'
+                sh 'node --version'
             }
         }
     }
